@@ -25,6 +25,7 @@ public class ItemController {
     @RequestMapping(path = "/items", method = RequestMethod.GET)
     public List<Item> getAllItems() {
         return itemService.getAll();
+        //j
     }
 
     @RequestMapping(path = "/item", method = RequestMethod.POST)
