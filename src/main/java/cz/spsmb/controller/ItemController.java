@@ -19,7 +19,7 @@ public class ItemController {
 
     @Autowired
     public ItemController(ItemService itemService) {
-        this.itemService = new SimpleItemService();
+        this.itemService = itemService;
     }
 
     @RequestMapping(path = "/items", method = RequestMethod.GET)
@@ -32,5 +32,6 @@ public class ItemController {
     public void saveItem(@RequestBody Item item) {
         itemService.save(item);
     }
+
 
 }
