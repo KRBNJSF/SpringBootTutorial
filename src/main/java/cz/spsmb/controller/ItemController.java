@@ -25,7 +25,7 @@ public class ItemController {
     @RequestMapping(path = "/items", method = RequestMethod.GET)
     public List<Item> getAllItems() {
         return itemService.getAll();
-        //j
+        //Talend api tester
     }
 
     @RequestMapping(path = "/item", method = RequestMethod.POST)
