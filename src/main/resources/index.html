@@ -10,11 +10,14 @@
 
 <div class="container">
     <div class="wrapper">
-        <form id="form" action="/signup">
+        <form id="form" action="/signup" method="post">
             <label name="name" for="username">Username:</label><br>
             <input type="text" id="username" value="" placeholder="Tomas"><br>
             <label for="password">Password:</label><br>
             <input name="password" type="password" id="password" value="" placeholder="heslo"><br><br>
+            <div class="bg-marquee">
+                <div class="inner-rect"></div>
+            </div>
             <input type="submit" value="Submit" id="submit">
         </form>
     </div>
