@@ -12,4 +12,6 @@ public interface ItemService {
 
     Item findItemByName(String name);
 
+
+    Item getItemByName(String itemName);
 }

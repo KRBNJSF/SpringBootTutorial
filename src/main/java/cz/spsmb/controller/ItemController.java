@@ -4,10 +4,7 @@ import cz.spsmb.service.SimpleItemService;
 import cz.spsmb.entity.Item;
 import cz.spsmb.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -31,6 +28,11 @@ public class ItemController {
     @RequestMapping(path = "/item", method = RequestMethod.POST)
     public void saveItem(@RequestBody Item item) {
         itemService.save(item);
+    }
+
+    @RequestMapping(path = "/item/{itemName}", method = RequestMethod.GET)
+    public Item getItemByName(@PathVariable String itemName) {
+        return this.itemService.getItemByName(itemName);
     }
 
 

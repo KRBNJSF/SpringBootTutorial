@@ -22,13 +22,18 @@ public class SimpleItemService implements ItemService {
 
     @Override
     public List<Item> getAll() {
-        Iterable<Item> itemIterator = this.itemRepository.findAll();
+        /*Iterable<Item> itemIterator = this.itemRepository.findAll();
         Iterator<Item> iterator = itemIterator.iterator();
         List<Item> list = new LinkedList<>();
         while (iterator.hasNext()) {
             list.add(iterator.next());
         }
-        return list;
+        return list;*/
+        List<Item> items = new LinkedList<>();
+        for (Item item : this.itemRepository.findAll()) {
+            items.add(item);
+        }
+        return items;
     }
 
     @Override
@@ -38,7 +43,13 @@ public class SimpleItemService implements ItemService {
 
     @Override
     public Item findItemByName(String name) {
-        return this.itemRepository.findByNameAnd(name);
+        return this.itemRepository.findByName(name);
+    }
+
+    @Override
+    public Item getItemByName(String itemName) {
+        return null;
+
     }
 
 }

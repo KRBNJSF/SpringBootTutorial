@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="wrapper">
+        <form id="form" action="/signup">
+            <label name="name" for="username">Username:</label><br>
+            <input type="text" id="username" value="" placeholder="Tomas"><br>
+            <label for="password">Password:</label><br>
+            <input name="password" type="password" id="password" value="" placeholder="heslo"><br><br>
+            <input type="submit" value="Submit" id="submit">
+        </form>
+    </div>
+</div>
+
+<div id="loader">
+    <img src="logo.png" class="logo">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
